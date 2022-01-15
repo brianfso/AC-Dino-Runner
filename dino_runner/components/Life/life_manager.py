@@ -8,12 +8,12 @@ class LifeManager:
 
     def new_lifes(self):
         self.life_list = []
-        total_lifes = 3 #total de vidas
+        total_lifes = 3
         pos_x = 1000
 
         for life in range(0, total_lifes):
             self.life_list.append(Life(pos_x))
-            pos_x += 27     #espacio
+            pos_x += 27
 
     def draw(self, screen):
         for life in self.life_list:
