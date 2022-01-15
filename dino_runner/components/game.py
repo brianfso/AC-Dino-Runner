@@ -5,12 +5,12 @@ from dino_runner.components.power_ups.powerup_manager import PowerUpManager
 from dino_runner.components.text_utils import get_score_element, get_centered_message
 from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS, RUNNING
 from dino_runner.components import text_utils
-
 from dino_runner.components.dinosaur import Dinosaur
-
+from dino_runner.components.Life.life_manager import LifeManager
 
 class Game:
     def __init__(self):
+
         pygame.init()
         pygame.display.set_caption(TITLE)
         pygame.display.set_icon(ICON)
@@ -27,10 +27,8 @@ class Game:
 
         self.points = 0
         self.death_count = 0
-
-
-
         self.running = True
+        self.life_manager = LifeManager()
 
     def run(self):
         self.obstacle_manager.reset_obstacles()
@@ -71,6 +69,7 @@ class Game:
         self.player.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
         self.power_up_manager.draw(self.screen)
+        self.life_manager.draw(self.screen)
         pygame.display.update()
         pygame.display.flip()
 
@@ -140,3 +139,4 @@ class Game:
 
         text, text_rect = text_utils.get_score_element(self.points)
         self.screen.blit(text, text_rect)
+

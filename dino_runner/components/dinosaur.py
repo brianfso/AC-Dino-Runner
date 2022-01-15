@@ -66,7 +66,7 @@ class Dinosaur(Sprite):
             if time_to_show >= 0:
                 if self.show_text:
                     font = pygame.font.Font('freesansbold.ttf', 18)
-                    text = font.render('Shield enabled for{}'.format(time_time_to_show), True,(0,0,0))
+                    text = font.render('Shield enabled for{}'.format(time_to_show), True,(0,0,0))
                     text_rect = text.get_rect()
                     text_rect.center(500, 40)
                     screen.blit(text,text_rect)
