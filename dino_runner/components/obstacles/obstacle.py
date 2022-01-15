@@ -13,9 +13,9 @@ class Obstacle(Sprite):
     # metodos
 
     def update(self, game_speed, obstacles):
-        self.rect.x -= game_speed # es para que el obstaculo se mueva a la misma velocidad que la imagen
+        self.rect.x -= game_speed
         if self.rect.x < -self.rect.width:
-            obstacles.pop() # remueve un elemento de una lista
+            obstacles.pop()
 
 
 

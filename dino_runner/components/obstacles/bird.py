@@ -1,4 +1,4 @@
-import random
+import random #aleatorio
 
 from dino_runner.components.obstacles.obstacle import Obstacle
 
