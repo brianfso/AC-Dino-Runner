@@ -38,7 +38,7 @@ class ObstacleManager:
                 else:
                     game.life_manager.delete_life()
 
-            self.obstacles.remove(obstacle)
+                self.obstacles.remove(obstacle)
 
 
     def draw(self, screen):
